@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/bin/dpmd:system/bin/dpmd \
     vendor/xiaomi/daisy/proprietary/bin/perfservice:system/bin/perfservice \
     vendor/xiaomi/daisy/proprietary/bin/wfdservice:system/bin/wfdservice \
+    vendor/xiaomi/daisy/proprietary/etc/diracmobile.config:system/etc/diracmobile.config \
     vendor/xiaomi/daisy/proprietary/etc/dpm/dpm.conf:system/etc/dpm/dpm.conf \
     vendor/xiaomi/daisy/proprietary/firmware/goodix_firmware.bin:system/firmware/goodix_firmware.bin \
     vendor/xiaomi/daisy/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
@@ -54,7 +55,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/lib/android.hardware.audio@2.0.so:system/lib/android.hardware.audio@2.0.so \
     vendor/xiaomi/daisy/proprietary/lib/android.hardware.audio@4.0.so:system/lib/android.hardware.audio@4.0.so \
     vendor/xiaomi/daisy/proprietary/lib/android.hardware.bluetooth.a2dp@1.0.so:system/lib/android.hardware.bluetooth.a2dp@1.0.so \
-    vendor/xiaomi/daisy/proprietary/lib/android.hardware.bluetooth@1.0.so:system/lib/android.hardware.bluetooth@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib/android.hardware.radio.config@1.0.so:system/lib/android.hardware.radio.config@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib/android.hardware.radio@1.0.so:system/lib/android.hardware.radio@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib/android.hardware.radio@1.1.so:system/lib/android.hardware.radio@1.1.so \
@@ -78,11 +78,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/lib/lib-imsvt.so:system/lib/lib-imsvt.so \
     vendor/xiaomi/daisy/proprietary/lib/lib-imsvtextutils.so:system/lib/lib-imsvtextutils.so \
     vendor/xiaomi/daisy/proprietary/lib/lib-imsvtutils.so:system/lib/lib-imsvtutils.so \
+    vendor/xiaomi/daisy/proprietary/lib/libDiracAPI_SHARED.so:system/lib/libDiracAPI_SHARED.so \
     vendor/xiaomi/daisy/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
     vendor/xiaomi/daisy/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
     vendor/xiaomi/daisy/proprietary/lib/libadsprpc_system.so:system/lib/libadsprpc_system.so \
     vendor/xiaomi/daisy/proprietary/lib/libaudioroute.so:system/lib/libaudioroute.so \
-    vendor/xiaomi/daisy/proprietary/lib/libbluetooth.so:system/lib/libbluetooth.so \
     vendor/xiaomi/daisy/proprietary/lib/libcdsprpc_system.so:system/lib/libcdsprpc_system.so \
     vendor/xiaomi/daisy/proprietary/lib/libdiag_system.so:system/lib/libdiag_system.so \
     vendor/xiaomi/daisy/proprietary/lib/libdisplayconfig.so:system/lib/libdisplayconfig.so \
@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
     vendor/xiaomi/daisy/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
     vendor/xiaomi/daisy/proprietary/lib/libyuv.so:system/lib/libyuv.so \
+    vendor/xiaomi/daisy/proprietary/lib/soundfx/libdirac.so:system/lib/soundfx/libdirac.so \
     vendor/xiaomi/daisy/proprietary/lib/vendor.qti.hardware.camera.device@1.0.so:system/lib/vendor.qti.hardware.camera.device@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:system/lib/vendor.qti.hardware.data.latency@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib/vendor.qti.hardware.fingerprint@1.0.so:system/lib/vendor.qti.hardware.fingerprint@1.0.so \
@@ -149,7 +150,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/lib64/android.hardware.audio@2.0.so:system/lib64/android.hardware.audio@2.0.so \
     vendor/xiaomi/daisy/proprietary/lib64/android.hardware.audio@4.0.so:system/lib64/android.hardware.audio@4.0.so \
     vendor/xiaomi/daisy/proprietary/lib64/android.hardware.bluetooth.a2dp@1.0.so:system/lib64/android.hardware.bluetooth.a2dp@1.0.so \
-    vendor/xiaomi/daisy/proprietary/lib64/android.hardware.bluetooth@1.0.so:system/lib64/android.hardware.bluetooth@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib64/android.hardware.radio.config@1.0.so:system/lib64/android.hardware.radio.config@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib64/android.hardware.radio@1.0.so:system/lib64/android.hardware.radio@1.0.so \
     vendor/xiaomi/daisy/proprietary/lib64/android.hardware.radio@1.1.so:system/lib64/android.hardware.radio@1.1.so \
@@ -176,10 +176,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/lib64/lib-imsvtutils.so:system/lib64/lib-imsvtutils.so \
     vendor/xiaomi/daisy/proprietary/lib64/libFileMux.so:system/lib64/libFileMux.so \
     vendor/xiaomi/daisy/proprietary/lib64/libadsprpc_system.so:system/lib64/libadsprpc_system.so \
-    vendor/xiaomi/daisy/proprietary/lib64/libaudioroute.so:system/lib64/libaudioroute.so \
     vendor/xiaomi/daisy/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
     vendor/xiaomi/daisy/proprietary/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so \
-    vendor/xiaomi/daisy/proprietary/lib64/libbluetooth.so:system/lib64/libbluetooth.so \
+    vendor/xiaomi/daisy/proprietary/lib64/libaudioroute.so:system/lib64/libaudioroute.so \
     vendor/xiaomi/daisy/proprietary/lib64/libcdsprpc_system.so:system/lib64/libcdsprpc_system.so \
     vendor/xiaomi/daisy/proprietary/lib64/libdiag_system.so:system/lib64/libdiag_system.so \
     vendor/xiaomi/daisy/proprietary/lib64/libdisplayconfig.so:system/lib64/libdisplayconfig.so \
