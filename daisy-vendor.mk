@@ -81,6 +81,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/daisy/proprietary/lib/libDiracAPI_SHARED.so:system/lib/libDiracAPI_SHARED.so \
     vendor/xiaomi/daisy/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
     vendor/xiaomi/daisy/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
+    vendor/xiaomi/daisy/proprietary/lib/libaacwrapper.so:system/lib/libaacwrapper.so \
     vendor/xiaomi/daisy/proprietary/lib/libadsprpc_system.so:system/lib/libadsprpc_system.so \
     vendor/xiaomi/daisy/proprietary/lib/libaudioroute.so:system/lib/libaudioroute.so \
     vendor/xiaomi/daisy/proprietary/lib/libcdsprpc_system.so:system/lib/libcdsprpc_system.so \
